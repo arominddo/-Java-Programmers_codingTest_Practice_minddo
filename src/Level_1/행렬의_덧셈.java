@@ -2,7 +2,7 @@ package Level_1;
 
 import java.util.Arrays;
 
-public class HyaengLyeolWui_DutSaem {
+public class 행렬의_덧셈 {
 
 	public static void main(String[] args) {
 

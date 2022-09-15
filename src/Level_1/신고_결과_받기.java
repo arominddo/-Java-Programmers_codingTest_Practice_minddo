@@ -2,7 +2,7 @@ package Level_1;
 
 import java.util.*;
 
-public class Singo_Gyeolgwa_batki {
+public class 신고_결과_받기 {
 
 	public static void main(String[] args) {
 		// 입력값 받기

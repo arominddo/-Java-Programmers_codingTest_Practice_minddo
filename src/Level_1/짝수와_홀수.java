@@ -1,6 +1,6 @@
 package Level_1;
 
-public class JJackSooWa_HolSoo {
+public class 짝수와_홀수 {
 
 	public static void main(String[] args) {
 

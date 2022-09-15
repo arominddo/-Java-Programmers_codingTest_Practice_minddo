@@ -2,7 +2,7 @@ package Level_1;
 
 import java.util.*;
 
-public class WanJuHaGee_MotHan_SunSoo {
+public class 완주하지_못한_선수 {
 
 	public static void main(String[] args) {
 		// 입력값

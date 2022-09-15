@@ -2,7 +2,7 @@ package Level_1;
 
 import java.util.Arrays;
 
-public class JaYeonSoo_DuiZipUh_BaeYeoalRo_ManDleKi {
+public class 자연수_뒤집어_배열로_만들기 {
 
 	public static void main(String[] args) {
 

@@ -1,6 +1,6 @@
 package Level_1;
 
-public class YackSooWui_Hab {
+public class 약수의_합 {
 
 	public static void main(String[] args) {
 

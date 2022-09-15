@@ -1,6 +1,6 @@
 package Level_1;
 
-public class YackSooWui_GaeSooWa_DutSaem {
+public class 약수의_개수와_덧셈 {
 
 	public static void main(String[] args) {
 
