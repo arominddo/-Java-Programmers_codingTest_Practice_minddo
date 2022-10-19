@@ -6,97 +6,57 @@ public class 숫자_짝꿍 {
 
 	public static void main(String[] args) {
 
-		String X = "12321";
-		String Y = "42531";
-		
+		String X = "5525";
+		String Y = "1255";
+
 //		String X = "100";
 //		String Y = "2345";
 
 		// 목표 result
-		String result = "321";
+		String result = "552";
 
 		// 확인
 
-//		System.out.println(solution(X1, Y1));
-		
-		String answer = "";
-
-		
-		HashSet<String> set_X = new HashSet<>(Arrays.asList(li_X));
-		HashSet<String> set_Y = new HashSet<>(Arrays.asList(li_Y));
-
-		
-		ArrayList<String> set = new ArrayList<>(set_X);
-
-		ArrayList<String> tmp = new ArrayList<>();
-
-		for (String i : set) {
-			for (int j = 0; j < Math.min(Collections.frequency(li_X, i), Collections.frequency(li_Y, i)); j++) {
-				tmp.add(i);
-			}
-		}
-		System.out.println(set);
-		if (tmp.size() == 0) {
-			answer = "-1";
-//			return answer;
-			System.out.println(answer);
-		}
-
-		Collections.sort(tmp);
-		
-
-		if (tmp.get(tmp.size()-1).equals("0")) {
-			answer = "0";
-//			return answer;
-			System.out.println(answer);
-		}
-
-		for (int i = tmp.size() - 1; i >= 0; i--) {
-			answer += tmp.get(i);
-		}
-		
-		System.out.println(answer);
+		System.out.println(solution(X, Y));
+		System.out.println(solution(X, Y).equals(result));
 
 	}
 
-//	static String solution(String X, String Y) {
-//		String answer = "";
-//
-//		ArrayList<String> li_X = new ArrayList<>(Arrays.asList(X.split("")));
-//		ArrayList<String> li_Y = new ArrayList<>(Arrays.asList(Y.split("")));
-//
-//		HashSet<String> set_X = new HashSet<>(li_X);
-//		HashSet<String> set_Y = new HashSet<>(li_X);
-//
-//		set_X.retainAll(set_Y);
-//		ArrayList<String> set = new ArrayList<>(set_X);
-//
-//		ArrayList<String> tmp = new ArrayList<>();
-//
-//		for (String i : set) {
-//			for (int j = 0; j < Math.min(Collections.frequency(li_X, i), Collections.frequency(li_Y, i)); j++) {
-//				tmp.add(i);
-//			}
-//		}
-//
-//		if (set.size() == 0) {
-//			answer = "-1";
-//			return answer;
-//		}
-//
-//		String[] str_tmp = tmp.toArray(new String[tmp.size()]);
-//		Arrays.sort(str_tmp);
-//
-//		if (str_tmp[str_tmp.length - 1].equals("0")) {
-//			answer = "0";
-//			return answer;
-//		}
-//
-//		for (int i = str_tmp.length - 1; i >= 0; i--) {
-//			answer += str_tmp[i];
-//		}
-//
-//		return answer;
-//	}
+	static String solution(String X, String Y) {
+
+		StringBuilder answer = new StringBuilder();
+
+		int[] arrX = new int[10];
+		int[] arrY = new int[10];
+
+		for (int i = 0; i < X.length(); i++) {
+			int index = X.charAt(i) - '0';
+			arrX[index]++;
+		}
+
+		for (int i = 0; i < Y.length(); i++) {
+			int index = Y.charAt(i) - '0';
+			arrY[index]++;
+		}
+
+		for (int i = arrX.length - 1; i >= 0; i--) {
+			while (arrX[i] >= 1 && arrY[i] >= 1) {
+				arrX[i]--;
+				arrY[i]--;
+
+				answer.append(i);
+			}
+		}
+
+		if (answer.toString().equals("")) {
+			return "-1";
+		} else if (answer.toString().startsWith("0")) {
+			return "0";
+		} else {
+
+			return answer.toString();
+		}
+
+	}
 
 }
