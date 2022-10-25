@@ -16,11 +16,24 @@ public class 프린터 {
 		
 		// 확인
 		
+		int answer = 0;
 		
-		/* 다시 처음부터 풀 것.
+		ArrayList<Integer> tmp = new ArrayList<>();
 		
+		for (int i : priorities) {
+			tmp.add(i);
+		}
 		
-		*/
+		for (int i=0; i<tmp.size();i++) {
+			if (tmp.get(i) == Collections.max(tmp)) {
+				tmp.set(i, 0);
+				answer++;
+				if (i==location) {
+					return 
+				}
+			}
+		}
+		
 
 	}
 
